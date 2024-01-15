@@ -9,13 +9,13 @@ import WidgetKit
 import AppIntents
 
 struct ConfigurationAppIntent: WidgetConfigurationIntent {
-    static var title: LocalizedStringResource = "Select List"
-    static var description = IntentDescription("Select HN List to fetch links from")
+    static var title: LocalizedStringResource = "Select Board"
+    static var description = IntentDescription("Select Clien Board to fetch links from")
 
     @Parameter(title: "Update every", default: .five)
     var reload: UpdateEveryIntent
 
-    @Parameter(title: "List", default: .recommend)
+    @Parameter(title: "List", default: .추천글)
     var list: HNPageFetcher.HNList
 }
 
@@ -43,8 +43,8 @@ extension HNPageFetcher.HNList: AppEnum {
     typealias Display = [HNPageFetcher.HNList:DisplayRepresentation]
     static var caseDisplayRepresentations: Display {
         [
-            .recommend : "추천글",
-            .news : "새소식"
+            .추천글 : "추천글",
+            .새소식 : "새소식"
 //            .active : "active",
 //            .asknew : "asknew",
 //            .classic : "classic",

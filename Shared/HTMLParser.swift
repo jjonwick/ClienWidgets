@@ -3,6 +3,7 @@
 //  
 //
 //  Created by Mattia Righetti on 21/10/23.
+//  Modified by jjonwick for clien on 14/01/24
 //
 
 import Kanna
@@ -22,14 +23,10 @@ public class HTMLParser {
 
     public func getElements() -> [Datum] {
         
-        NSLog("get items")
-
         guard
             let items = document.body?.xpath("//div[@data-role='list-row']")
         else { return [] }
         
-        NSLog("number of items: \(items.count)")
-
         var data = [Datum]()
         for item in items {
             guard let id = item["data-board-sn"] else { continue }
@@ -54,12 +51,12 @@ public class HTMLParser {
             let username = innerHtml["data-author-id"]
             let age = innerHtml.xpath("//div[@class='list_time']//span").first?.text
             let age_trimmed = age?.trimmingCharacters(in: .whitespacesAndNewlines)
-            let age_first_5 = age_trimmed?.prefix(5)
-            let age_first_5_string = String(age_first_5 ?? "NA")
+            let age_5char = age_trimmed?.prefix(5)
+            let age_string = String(age_5char ?? "NA")
             let upvotes = innerHtml.xpath("//div[@data-role='list-like-count']//span").first?.text?.leaveNumbers // 공감
             let comments = innerHtml["data-comment-count"]
 
-            return HNLink(id: id, title: title, url: url, username: username, comments: comments, upvotes: upvotes, elapsed: age_first_5_string)
+            return HNLink(id: id, title: title, url: url, username: username, comments: comments, upvotes: upvotes, elapsed: age_string)
         }
 
         return nil

@@ -43,16 +43,16 @@ struct HNWidgetEntryView : View {
         } else {
             VStack(alignment: .leading) {
                 HStack(alignment: .center) {
-                    Text("Clien Posts")
+                    Text(entry.list)
                         .font(.system(size: 20, weight: .bold))
                         .foregroundColor(.orange)
                         .padding(.top, spacing.0)
                         .padding(.bottom, spacing.1)
 
-                    Text(entry.list)
-                        .font(.system(size: 13, weight: .thin))
-                        .padding(.top, spacing.0)
-                        .padding(.bottom, spacing.1)
+//                    Text(entry.list)
+//                        .font(.system(size: 13, weight: .thin))
+//                        .padding(.top, spacing.0)
+//                        .padding(.bottom, spacing.1)
                 }
 
                 VStack(alignment: .leading) {

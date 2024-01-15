@@ -31,9 +31,9 @@ struct InfoView: View {
             }.listRowBackground(Color.clear)
             
             Section {
-                Link(destination: URL(string: "https://github.com/mattrighetti/HNWidgets.git")!, label: {
+                Link(destination: URL(string: "https://github.com/jjonwick/ClienWidgets.git")!, label: {
                     HStack {
-                        Text("View on Clien")
+                        Text("View on GitHub")
                         Spacer()
                         Image(systemName: "arrow.up.right")
                     }.foregroundStyle(.primary)
