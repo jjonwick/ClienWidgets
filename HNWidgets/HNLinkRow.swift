@@ -22,7 +22,7 @@ struct HNLinkRow: View {
                     .lineLimit(lineLimit)
 
                 if link.upvotes != nil && link.username != nil && link.elapsed != nil {
-                    Text("\(link.upvotes!) points by \(link.username!) \(link.elapsed!)")
+                    Text("\(link.elapsed!) 공감 \(link.upvotes!), 댓글 \(link.comments!), 작성자 \(link.username!)")
                         .font(.system(size: 11, weight: .regular))
                         .foregroundStyle(.secondary)
                 }

@@ -23,7 +23,7 @@ struct InfoView: View {
                 }.listRowSeparator(.hidden)
                 HStack {
                     Spacer()
-                    Text("HNWidgets v" + appVersion)
+                    Text("ClienWidgets v" + appVersion)
                         .font(.system(size: 15, weight: .bold))
                         .foregroundStyle(.primary)
                     Spacer()
@@ -33,7 +33,7 @@ struct InfoView: View {
             Section {
                 Link(destination: URL(string: "https://github.com/mattrighetti/HNWidgets.git")!, label: {
                     HStack {
-                        Text("View on GitHub")
+                        Text("View on Clien")
                         Spacer()
                         Image(systemName: "arrow.up.right")
                     }.foregroundStyle(.primary)

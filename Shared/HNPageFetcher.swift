@@ -18,37 +18,38 @@ enum ParserError: Error {
 
 struct HNPageFetcher {
     enum HNList: String, CaseIterable {
-        case home
-        case best
-        case shownew
-        case asknew
-        case launches
-        case whoishiring
-        case pool
-        case invited
-        case active
-        case noobstories
-        case classic
+        case recommend
+        case news
+        // case shownew
+        // case asknew
+        // case launches
+        // case whoishiring
+        // case pool
+        // case invited
+        // case active
+        // case noobstories
+        // case classic
 
         static var allCases: [HNPageFetcher.HNList] = [
-            .active, .asknew, .best, .classic, .home,
-            .invited, .launches, .noobstories, .pool,
-            .shownew, .whoishiring
+            .recommend, .news
+            // .active, .asknew, .news, .classic, .recommend,
+            // .invited, .launches, .noobstories, .pool,
+            // .shownew, .whoishiring
         ]
 
         var url: URL {
             var urlComponents = URLComponents()
             urlComponents.scheme = "https"
-            urlComponents.host = "news.ycombinator.com"
+            urlComponents.host = "www.clien.net"
             
-            switch self {
-            case .home: break
-            case .whoishiring:
-                urlComponents.path = "/submitted"
-                urlComponents.query = "id=" + self.rawValue
-            default:
-                urlComponents.path = "/" + self.rawValue
-            }
+           switch self {
+           case .recommend:
+               urlComponents.path = "/service/recommend"
+           case .news:
+               urlComponents.path = "/service/board/news"
+           default:
+               urlComponents.path = "/service/recommend"
+           }
 
             return urlComponents.url!
         }
@@ -58,33 +59,46 @@ struct HNPageFetcher {
 
     private init() {}
 
-    private func getArticles(from list: HNList? = .home) async throws -> Data {
+    private func getArticles(from list: HNList? = .recommend) async throws -> Data {
         var req = URLRequest(url: list!.url)
-        req.setValue("HNWidgets", forHTTPHeaderField: "User-Agent")
+        
+//        req.setValue("ClienWidgets", forHTTPHeaderField: "User-Agent")
 
         let (data, res) = try await URLSession.shared.data(for: req)
         guard let httpResponse = res as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            NSLog("httpResponse is not 200")
             throw FetchError.failure
         }
 
         return data
     }
 
-    public func getHNLinks(from list: HNList? = .home) async -> Result<[HNLink], Error> {
+    public func getHNLinks(from list: HNList? = .recommend) async -> Result<[HNLink], Error> {
+        
         guard let data = try? await getArticles(from: list) else {
+            NSLog("Failed to getArticles")
             return .failure(FetchError.failure)
         }
 
         guard
             let htmlString = String(data: data, encoding: .utf8),
             let parser = HTMLParser(html: htmlString)
-        else { return .failure(ParserError.htmlParseError) }
+        else {
+            NSLog("Parse error")
+            return .failure(ParserError.htmlParseError)
+        }
+
+        NSLog("Try getHNLinks")
 
         let links = parser.getHNLinks()
         if links.count > 0 {
             return .success(links)
         }
+        else {
+            NSLog("No items parsed")
+        }
         
+        NSLog("ParserError.unknown")
         return .failure(ParserError.unknown)
     }
 }

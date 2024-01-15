@@ -43,7 +43,7 @@ struct HNWidgetEntryView : View {
         } else {
             VStack(alignment: .leading) {
                 HStack(alignment: .center) {
-                    Text("Hacker News")
+                    Text("Clien Posts")
                         .font(.system(size: 20, weight: .bold))
                         .foregroundColor(.orange)
                         .padding(.top, spacing.0)
@@ -58,7 +58,7 @@ struct HNWidgetEntryView : View {
                 VStack(alignment: .leading) {
                     if entry.links.count >= limit {
                         ForEach(entry.links[0..<limit]) { link in
-                            Link(destination: URL(string: "hnwidgets://openlink?link=\(link.url)")!, label: {
+                            Link(destination: URL(string: "clienwidgets://openlink?link=\(link.url)")!, label: {
                                 HNLinkRow(link: link)
                                     .padding(.bottom, spacing.2)
                             })

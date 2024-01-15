@@ -6,9 +6,10 @@
 //
 
 import Kanna
+import Foundation
 
 public enum Datum {
-    case Athing(id: String, innerHtml: XMLElement, sub: XMLElement)
+    case Athing(id: String, innerHtml: XMLElement)
 }
 
 public class HTMLParser {
@@ -20,34 +21,45 @@ public class HTMLParser {
     }
 
     public func getElements() -> [Datum] {
+        
+        NSLog("get items")
+
         guard
-            let titles = document.body?.xpath("//tr[@class='athing']"),
-            let sub = document.body?.xpath("//td[@class='subtext']")
+            let items = document.body?.xpath("//div[@data-role='list-row']")
         else { return [] }
+        
+        NSLog("number of items: \(items.count)")
 
         var data = [Datum]()
-        for (elem, sub) in zip(titles, sub) {
-            guard let id = elem["id"] else { continue }
-            data.append(Datum.Athing(id: id, innerHtml: elem, sub: sub))
+        for item in items {
+            guard let id = item["data-board-sn"] else { continue }
+            data.append(Datum.Athing(id: id, innerHtml: item))
         }
 
         return data
     }
 
     private func getHNLink(_ obj: Datum) -> HNLink? {
-        if case .Athing(let id, let innerHtml, let sub) = obj {
+        if case .Athing(let id, let innerHtml) = obj {
+            
             guard
-                let header = innerHtml.xpath("//td[@class='title']//a[1]").first,
-                let title = header.text,
-                let url = header["href"]
+                let subject = innerHtml.xpath("//a[@class='list_subject']").first,
+                let title_orig = subject.xpath("//span[@data-role='list-title-text']").first?.text,
+                let url_path = subject["href"]
             else { return nil }
 
-            let username = sub.xpath("//a[@class='hnuser']").first?.text
-            let age = sub.xpath("//span[@class='age']//a").first?.text
-            let score = sub.xpath("//span[@class='score']").first?.text?.leaveNumbers
-            let comments = sub.xpath("//a[contains(text(), 'comments')]").first?.text?.leaveNumbers
+            let url = "https://www.clien.net" + url_path
+            let title = title_orig.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let username = innerHtml["data-author-id"]
+            let age = innerHtml.xpath("//div[@class='list_time']//span").first?.text
+            let age_trimmed = age?.trimmingCharacters(in: .whitespacesAndNewlines)
+            let age_first_5 = age_trimmed?.prefix(5)
+            let age_first_5_string = String(age_first_5 ?? "NA")
+            let upvotes = innerHtml.xpath("//div[@data-role='list-like-count']//span").first?.text?.leaveNumbers // 공감
+            let comments = innerHtml["data-comment-count"]
 
-            return HNLink(id: id, title: title, url: url, username: username, comments: comments, upvotes: score, elapsed: age)
+            return HNLink(id: id, title: title, url: url, username: username, comments: comments, upvotes: upvotes, elapsed: age_first_5_string)
         }
 
         return nil

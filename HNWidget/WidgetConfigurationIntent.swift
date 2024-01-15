@@ -15,7 +15,7 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     @Parameter(title: "Update every", default: .five)
     var reload: UpdateEveryIntent
 
-    @Parameter(title: "List", default: .home)
+    @Parameter(title: "List", default: .recommend)
     var list: HNPageFetcher.HNList
 }
 
@@ -43,17 +43,17 @@ extension HNPageFetcher.HNList: AppEnum {
     typealias Display = [HNPageFetcher.HNList:DisplayRepresentation]
     static var caseDisplayRepresentations: Display {
         [
-            .active : "active",
-            .asknew : "asknew",
-            .best : "best",
-            .classic : "classic",
-            .home : "home",
-            .invited : "invited",
-            .launches: "launches",
-            .noobstories: "noobstories",
-            .pool: "pool",
-            .shownew: "shownew",
-            .whoishiring: "whoishiring"
+            .recommend : "추천글",
+            .news : "새소식"
+//            .active : "active",
+//            .asknew : "asknew",
+//            .classic : "classic",
+//            .invited : "invited",
+//            .launches: "launches",
+//            .noobstories: "noobstories",
+//            .pool: "pool",
+//            .shownew: "shownew",
+//            .whoishiring: "whoishiring"
         ]
     }
 }

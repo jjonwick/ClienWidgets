@@ -20,7 +20,7 @@ struct SimpleEntry: TimelineEntry {
 
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: .now, list: "home", links: [
+        SimpleEntry(date: .now, list: "recommend", links: [
             HNLink(id: "134", title: "Title", url: "", username: "mattrighetti", comments: "3234", upvotes: "22", elapsed: "2 hours ago"),
             HNLink(id: "133", title: "Title", url: "", username: "mattrighetti", comments: "3234", upvotes: "22", elapsed: "2 hours ago")
         ])

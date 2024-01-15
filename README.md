@@ -9,6 +9,6 @@ A set of widgets to bring the latest Hacker News links into your iPhone and iPad
 ### Features
 - Light/Dark mode
 - Choose how frequently the widget should refresh data
-- Choose between different Hacker News lists (best, active, home, etc.)
+- Choose between different Hacker News lists (news, active, recommend, etc.)
 
 ![Frame 2](https://github.com/mattrighetti/HNWidgets/assets/16304728/0a458791-e7ca-46c1-8ee3-9203548ceea3)

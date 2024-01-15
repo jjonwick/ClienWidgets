@@ -22,7 +22,7 @@ struct SplashScreen: View {
                         .frame(width: 300)
                         .clipShape(RoundedRectangle(cornerRadius: 15))
 
-                    Text("Hacker News\nWidgets")
+                    Text("Clien\nWidgets")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundStyle(.white)
@@ -48,7 +48,7 @@ struct SplashScreen: View {
         .onOpenURL(perform: { url in
             guard let urlComponents = URLComponents(string: url.absoluteString) else { return }
             guard
-                url.scheme == "hnwidgets",
+                url.scheme == "clienwidgets",
                 url.host == "openlink",
                 let link = urlComponents.queryItems?.first(where: { $0.name == "link" })?.value
             else { return }
