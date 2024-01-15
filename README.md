@@ -1,14 +1,10 @@
-![GitHub Logo](https://github.com/mattrighetti/HNWidgets/assets/16304728/419a47c5-94c7-486b-9c2c-1fc44c7828d3)
+![GitHub Logo](https://github.com/jjonwick/ClienWidgets/blob/master/HNWidgets%20Icons/1024.jpg?raw=true)
 
-### Download
-[App Store Link](https://apps.apple.com/us/app/hnwidgets/id6470153058)
-
-### HN Widgets
-A set of widgets to bring the latest Hacker News links into your iPhone and iPad home screen.
+### Clien Widgets
+A set of widgets to bring the latest Clien Posts links into your iPhone and iPad home screen.
 
 ### Features
 - Light/Dark mode
 - Choose how frequently the widget should refresh data
-- Choose between different Hacker News lists (news, active, recommend, etc.)
+- Choose between different lists (추천글, 뉴스)
 
-![Frame 2](https://github.com/mattrighetti/HNWidgets/assets/16304728/0a458791-e7ca-46c1-8ee3-9203548ceea3)
