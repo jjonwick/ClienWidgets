@@ -23,7 +23,7 @@
 		5F7FDDA62AE46E3C005C6C24 /* HNWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7FDDA52AE46E3C005C6C24 /* HNWidgetBundle.swift */; };
 		5F7FDDA82AE46E3C005C6C24 /* HNWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7FDDA72AE46E3C005C6C24 /* HNWidget.swift */; };
 		5F7FDDAA2AE46E3D005C6C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7FDDA92AE46E3D005C6C24 /* Assets.xcassets */; };
-		5F7FDDAE2AE46E3D005C6C24 /* HNWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5F7FDDA12AE46E3C005C6C24 /* HNWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F7FDDAE2AE46E3D005C6C24 /* ClienWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5F7FDDA12AE46E3C005C6C24 /* ClienWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5F7FDDB32AE46FD2005C6C24 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7FDDB22AE46FD2005C6C24 /* Provider.swift */; };
 		5F7FDDB72AE4700F005C6C24 /* HNWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7FDDB62AE4700F005C6C24 /* HNWidgetEntryView.swift */; };
 		5F9641792AE565EB009D247D /* WidgetConfigurationIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9641782AE565EB009D247D /* WidgetConfigurationIntent.swift */; };
@@ -50,7 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5F7FDDAE2AE46E3D005C6C24 /* HNWidgetExtension.appex in Embed Foundation Extensions */,
+				5F7FDDAE2AE46E3D005C6C24 /* ClienWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,7 +69,7 @@
 		5F7FDD602AE468CD005C6C24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5F7FDD6D2AE469AE005C6C24 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		5F7FDD6F2AE469AE005C6C24 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		5F7FDDA12AE46E3C005C6C24 /* HNWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HNWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F7FDDA12AE46E3C005C6C24 /* ClienWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClienWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7FDDA52AE46E3C005C6C24 /* HNWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNWidgetBundle.swift; sourceTree = "<group>"; };
 		5F7FDDA72AE46E3C005C6C24 /* HNWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNWidget.swift; sourceTree = "<group>"; };
 		5F7FDDA92AE46E3D005C6C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				5F7FDD552AE468CC005C6C24 /* ClienWidgets.app */,
-				5F7FDDA12AE46E3C005C6C24 /* HNWidgetExtension.appex */,
+				5F7FDDA12AE46E3C005C6C24 /* ClienWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,9 +205,9 @@
 			productReference = 5F7FDD552AE468CC005C6C24 /* ClienWidgets.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5F7FDDA02AE46E3C005C6C24 /* HNWidgetExtension */ = {
+		5F7FDDA02AE46E3C005C6C24 /* ClienWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F7FDDAF2AE46E3D005C6C24 /* Build configuration list for PBXNativeTarget "HNWidgetExtension" */;
+			buildConfigurationList = 5F7FDDAF2AE46E3D005C6C24 /* Build configuration list for PBXNativeTarget "ClienWidgetExtension" */;
 			buildPhases = (
 				5F7FDD9D2AE46E3C005C6C24 /* Sources */,
 				5F7FDD9E2AE46E3C005C6C24 /* Frameworks */,
@@ -217,12 +217,12 @@
 			);
 			dependencies = (
 			);
-			name = HNWidgetExtension;
+			name = ClienWidgetExtension;
 			packageProductDependencies = (
 				4616C5E82B53B4B2009053A4 /* Kanna */,
 			);
 			productName = HNWidgetExtension;
-			productReference = 5F7FDDA12AE46E3C005C6C24 /* HNWidgetExtension.appex */;
+			productReference = 5F7FDDA12AE46E3C005C6C24 /* ClienWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -260,7 +260,7 @@
 			projectRoot = "";
 			targets = (
 				5F7FDD542AE468CC005C6C24 /* ClienWidgets */,
-				5F7FDDA02AE46E3C005C6C24 /* HNWidgetExtension */,
+				5F7FDDA02AE46E3C005C6C24 /* ClienWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -321,7 +321,7 @@
 /* Begin PBXTargetDependency section */
 		5F7FDDAD2AE46E3D005C6C24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5F7FDDA02AE46E3C005C6C24 /* HNWidgetExtension */;
+			target = 5F7FDDA02AE46E3C005C6C24 /* ClienWidgetExtension */;
 			targetProxy = 5F7FDDAC2AE46E3D005C6C24 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -627,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F7FDDAF2AE46E3D005C6C24 /* Build configuration list for PBXNativeTarget "HNWidgetExtension" */ = {
+		5F7FDDAF2AE46E3D005C6C24 /* Build configuration list for PBXNativeTarget "ClienWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F7FDDB02AE46E3D005C6C24 /* Debug */,
