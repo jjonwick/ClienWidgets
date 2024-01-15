@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5F7FDD542AE468CC005C6C24"
-               BuildableName = "HNWidgets.app"
-               BlueprintName = "HNWidgets"
-               ReferencedContainer = "container:HNWidgets.xcodeproj">
+               BuildableName = "ClienWidgets.app"
+               BlueprintName = "ClienWidgets"
+               ReferencedContainer = "container:ClienWidgets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5F7FDD542AE468CC005C6C24"
-            BuildableName = "HNWidgets.app"
-            BlueprintName = "HNWidgets"
-            ReferencedContainer = "container:HNWidgets.xcodeproj">
+            BuildableName = "ClienWidgets.app"
+            BlueprintName = "ClienWidgets"
+            ReferencedContainer = "container:ClienWidgets.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5F7FDD542AE468CC005C6C24"
-            BuildableName = "HNWidgets.app"
-            BlueprintName = "HNWidgets"
-            ReferencedContainer = "container:HNWidgets.xcodeproj">
+            BuildableName = "ClienWidgets.app"
+            BlueprintName = "ClienWidgets"
+            ReferencedContainer = "container:ClienWidgets.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

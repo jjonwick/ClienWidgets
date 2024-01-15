@@ -18,7 +18,7 @@
                BlueprintIdentifier = "5F7FDDA02AE46E3C005C6C24"
                BuildableName = "HNWidgetExtension.appex"
                BlueprintName = "HNWidgetExtension"
-               ReferencedContainer = "container:HNWidgets.xcodeproj">
+               ReferencedContainer = "container:ClienWidgets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,9 +30,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5F7FDD542AE468CC005C6C24"
-               BuildableName = "HNWidgets.app"
-               BlueprintName = "HNWidgets"
-               ReferencedContainer = "container:HNWidgets.xcodeproj">
+               BuildableName = "ClienWidgets.app"
+               BlueprintName = "ClienWidgets"
+               ReferencedContainer = "container:ClienWidgets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -64,16 +64,16 @@
             BlueprintIdentifier = "5F7FDDA02AE46E3C005C6C24"
             BuildableName = "HNWidgetExtension.appex"
             BlueprintName = "HNWidgetExtension"
-            ReferencedContainer = "container:HNWidgets.xcodeproj">
+            ReferencedContainer = "container:ClienWidgets.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5F7FDD542AE468CC005C6C24"
-            BuildableName = "HNWidgets.app"
-            BlueprintName = "HNWidgets"
-            ReferencedContainer = "container:HNWidgets.xcodeproj">
+            BuildableName = "ClienWidgets.app"
+            BlueprintName = "ClienWidgets"
+            ReferencedContainer = "container:ClienWidgets.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <EnvironmentVariables>
@@ -107,9 +107,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5F7FDD542AE468CC005C6C24"
-            BuildableName = "HNWidgets.app"
-            BlueprintName = "HNWidgets"
-            ReferencedContainer = "container:HNWidgets.xcodeproj">
+            BuildableName = "ClienWidgets.app"
+            BlueprintName = "ClienWidgets"
+            ReferencedContainer = "container:ClienWidgets.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

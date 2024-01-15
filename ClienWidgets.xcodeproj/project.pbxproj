@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4616C5E72B53B4AD009053A4 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = 4616C5E62B53B4AD009053A4 /* Kanna */; };
+		4616C5E92B53B4B2009053A4 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = 4616C5E82B53B4B2009053A4 /* Kanna */; };
 		5F4053602AE476EB00B46E36 /* HNLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F40535D2AE476EB00B46E36 /* HNLink.swift */; };
 		5F4053612AE476EB00B46E36 /* HNLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F40535D2AE476EB00B46E36 /* HNLink.swift */; };
 		5F4053622AE476EB00B46E36 /* HNPageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F40535E2AE476EB00B46E36 /* HNPageFetcher.swift */; };
 		5F4053632AE476EB00B46E36 /* HNPageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F40535E2AE476EB00B46E36 /* HNPageFetcher.swift */; };
 		5F4053642AE476EB00B46E36 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F40535F2AE476EB00B46E36 /* HTMLParser.swift */; };
 		5F4053652AE476EB00B46E36 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F40535F2AE476EB00B46E36 /* HTMLParser.swift */; };
-		5F40536A2AE4779C00B46E36 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = 5F4053692AE4779C00B46E36 /* Kanna */; };
-		5F40536C2AE477BD00B46E36 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = 5F40536B2AE477BD00B46E36 /* Kanna */; };
 		5F7FDD592AE468CC005C6C24 /* HNWidgetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7FDD582AE468CC005C6C24 /* HNWidgetsApp.swift */; };
 		5F7FDD5D2AE468CD005C6C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7FDD5C2AE468CD005C6C24 /* Assets.xcassets */; };
 		5F7FDD612AE468CD005C6C24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7FDD602AE468CD005C6C24 /* Preview Assets.xcassets */; };
@@ -62,7 +62,7 @@
 		5F40535E2AE476EB00B46E36 /* HNPageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNPageFetcher.swift; sourceTree = "<group>"; };
 		5F40535F2AE476EB00B46E36 /* HTMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
 		5F4053682AE4779700B46E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		5F7FDD552AE468CC005C6C24 /* HNWidgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNWidgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F7FDD552AE468CC005C6C24 /* ClienWidgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClienWidgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7FDD582AE468CC005C6C24 /* HNWidgetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNWidgetsApp.swift; sourceTree = "<group>"; };
 		5F7FDD5C2AE468CD005C6C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F7FDD5E2AE468CD005C6C24 /* HNWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HNWidgets.entitlements; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F40536A2AE4779C00B46E36 /* Kanna in Frameworks */,
+				4616C5E72B53B4AD009053A4 /* Kanna in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F40536C2AE477BD00B46E36 /* Kanna in Frameworks */,
+				4616C5E92B53B4B2009053A4 /* Kanna in Frameworks */,
 				5F7FDDA32AE46E3C005C6C24 /* SwiftUI.framework in Frameworks */,
 				5F7FDDA22AE46E3C005C6C24 /* WidgetKit.framework in Frameworks */,
 			);
@@ -128,7 +128,7 @@
 		5F7FDD562AE468CC005C6C24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F7FDD552AE468CC005C6C24 /* HNWidgets.app */,
+				5F7FDD552AE468CC005C6C24 /* ClienWidgets.app */,
 				5F7FDDA12AE46E3C005C6C24 /* HNWidgetExtension.appex */,
 			);
 			name = Products;
@@ -183,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5F7FDD542AE468CC005C6C24 /* HNWidgets */ = {
+		5F7FDD542AE468CC005C6C24 /* ClienWidgets */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F7FDD642AE468CD005C6C24 /* Build configuration list for PBXNativeTarget "HNWidgets" */;
+			buildConfigurationList = 5F7FDD642AE468CD005C6C24 /* Build configuration list for PBXNativeTarget "ClienWidgets" */;
 			buildPhases = (
 				5F7FDD512AE468CC005C6C24 /* Sources */,
 				5F7FDD522AE468CC005C6C24 /* Frameworks */,
@@ -197,12 +197,12 @@
 			dependencies = (
 				5F7FDDAD2AE46E3D005C6C24 /* PBXTargetDependency */,
 			);
-			name = HNWidgets;
+			name = ClienWidgets;
 			packageProductDependencies = (
-				5F4053692AE4779C00B46E36 /* Kanna */,
+				4616C5E62B53B4AD009053A4 /* Kanna */,
 			);
 			productName = HNWidgets;
-			productReference = 5F7FDD552AE468CC005C6C24 /* HNWidgets.app */;
+			productReference = 5F7FDD552AE468CC005C6C24 /* ClienWidgets.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5F7FDDA02AE46E3C005C6C24 /* HNWidgetExtension */ = {
@@ -219,7 +219,7 @@
 			);
 			name = HNWidgetExtension;
 			packageProductDependencies = (
-				5F40536B2AE477BD00B46E36 /* Kanna */,
+				4616C5E82B53B4B2009053A4 /* Kanna */,
 			);
 			productName = HNWidgetExtension;
 			productReference = 5F7FDDA12AE46E3C005C6C24 /* HNWidgetExtension.appex */;
@@ -243,7 +243,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5F7FDD502AE468CC005C6C24 /* Build configuration list for PBXProject "HNWidgets" */;
+			buildConfigurationList = 5F7FDD502AE468CC005C6C24 /* Build configuration list for PBXProject "ClienWidgets" */;
 			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -259,7 +259,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5F7FDD542AE468CC005C6C24 /* HNWidgets */,
+				5F7FDD542AE468CC005C6C24 /* ClienWidgets */,
 				5F7FDDA02AE46E3C005C6C24 /* HNWidgetExtension */,
 			);
 		};
@@ -545,7 +545,7 @@
 				DEVELOPMENT_TEAM = B67Z8E7ZCF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HNWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = HNWidget;
+				INFOPLIST_KEY_CFBundleDisplayName = ClienWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -581,7 +581,7 @@
 				DEVELOPMENT_TEAM = B67Z8E7ZCF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HNWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = HNWidget;
+				INFOPLIST_KEY_CFBundleDisplayName = ClienWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -609,7 +609,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5F7FDD502AE468CC005C6C24 /* Build configuration list for PBXProject "HNWidgets" */ = {
+		5F7FDD502AE468CC005C6C24 /* Build configuration list for PBXProject "ClienWidgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F7FDD622AE468CD005C6C24 /* Debug */,
@@ -618,7 +618,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F7FDD642AE468CD005C6C24 /* Build configuration list for PBXNativeTarget "HNWidgets" */ = {
+		5F7FDD642AE468CD005C6C24 /* Build configuration list for PBXNativeTarget "ClienWidgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F7FDD652AE468CD005C6C24 /* Debug */,
@@ -650,12 +650,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5F4053692AE4779C00B46E36 /* Kanna */ = {
+		4616C5E62B53B4AD009053A4 /* Kanna */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5F4053672AE4778700B46E36 /* XCRemoteSwiftPackageReference "Kanna" */;
 			productName = Kanna;
 		};
-		5F40536B2AE477BD00B46E36 /* Kanna */ = {
+		4616C5E82B53B4B2009053A4 /* Kanna */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5F4053672AE4778700B46E36 /* XCRemoteSwiftPackageReference "Kanna" */;
 			productName = Kanna;
